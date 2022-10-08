@@ -620,6 +620,8 @@ async function doBuild(
 
     // write or generate files with rollup
     const { rollup } = await import('rollup')
+    // rollup打包起点
+    console.log('rollup options: ', rollupOptions);
     const bundle = await rollup(rollupOptions)
     parallelBuilds.push(bundle)
 
